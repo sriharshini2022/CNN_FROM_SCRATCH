@@ -1,70 +1,133 @@
-# 🧠 CNN From Scratch – CIFAR-10 Image Classification  
+<div align="center">
 
-A complete **Convolutional Neural Network (CNN)** implementation built from scratch using **PyTorch** to classify images from the CIFAR-10 dataset.  
+# 🧠 CNN From Scratch  
+### 🎯 CIFAR-10 Image Classification using PyTorch  
 
-This project demonstrates the full deep learning pipeline including model building, training, evaluation, visualization, and interpretability techniques.
-
----
-
-## 🚀 Project Highlights
-
-- Custom CNN architecture built using PyTorch  
-- CIFAR-10 dataset preprocessing & normalization  
-- Model training using SGD with Momentum  
-- Performance evaluation with multiple metrics  
-- Confusion matrix & classification report  
-- Feature map visualization  
-- Saliency Maps & Class Activation Mapping (CAM)  
-- t-SNE feature embedding visualization  
-- Deep Dream implementation  
-- Model architecture visualization using Torchviz  
+<img src="https://img.shields.io/badge/PyTorch-DeepLearning-red?style=for-the-badge&logo=pytorch">
+<img src="https://img.shields.io/badge/Dataset-CIFAR10-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Model-CNN-green?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
 
 ---
 
-## 📂 Dataset
+🚀 End-to-End Convolutional Neural Network built from scratch  
+📊 Training • Evaluation • Visualization • Interpretability  
 
-**CIFAR-10 Dataset**
+</div>
 
-- 60,000 color images (32×32 pixels)  
-- 10 Classes:
-  - Airplane  
-  - Automobile  
-  - Bird  
-  - Cat  
-  - Deer  
-  - Dog  
-  - Frog  
-  - Horse  
-  - Ship  
-  - Truck  
+---
 
-Split:
-- 50,000 Training Images  
-- 10,000 Test Images  
+## 📌 Project Overview
+
+This project implements a **Convolutional Neural Network (CNN)** from scratch using **PyTorch** to classify images from the CIFAR-10 dataset.
+
+It covers:
+
+✔ Model Architecture Design  
+✔ Training Pipeline  
+✔ Performance Evaluation  
+✔ Advanced Visualization Techniques  
+✔ Model Interpretability  
+
+---
+
+## 📂 Dataset – CIFAR-10
+
+| Feature | Details |
+|---------|----------|
+| Total Images | 60,000 |
+| Image Size | 32 × 32 RGB |
+| Classes | 10 |
+| Training Images | 50,000 |
+| Test Images | 10,000 |
+
+### 🏷 Classes
+
+Airplane • Automobile • Bird • Cat • Deer • Dog • Frog • Horse • Ship • Truck  
 
 ---
 
 ## 🏗️ Model Architecture
 
-### Convolutional Layers
-- Conv2D → ReLU  
-- Conv2D → ReLU  
-- MaxPooling  
-- Conv2D (64 filters)  
-- Additional pooling  
+```
+Input Image (32x32x3)
+        ↓
+Conv2D → ReLU
+        ↓
+Conv2D → ReLU
+        ↓
+MaxPooling
+        ↓
+Conv2D (64 filters)
+        ↓
+MaxPooling
+        ↓
+Flatten
+        ↓
+Fully Connected Layer
+        ↓
+Output (10 Classes)
+```
 
-### Fully Connected Layers
-- Flatten  
-- Linear Layer  
-- Output Layer (10 classes)  
+### ⚙️ Training Configuration
 
-### Training Configuration
 - **Loss Function:** CrossEntropyLoss  
 - **Optimizer:** SGD  
   - Learning Rate: 0.001  
   - Momentum: 0.9  
   - Weight Decay: 0.005  
 - Batch Size: 64  
+
+---
+
+## 📊 Evaluation Metrics
+
+✔ Accuracy  
+✔ Precision  
+✔ Recall  
+✔ F1-Score  
+✔ Confusion Matrix  
+✔ Classification Report  
+
+📁 Outputs Generated:
+
+- `best_cnn_cifar10.pth`  
+- `cifar10_results.csv`  
+- `cnn_architecture.png`  
+
+---
+
+## 🔍 Visualization & Interpretability
+
+This project includes advanced deep learning explainability techniques:
+
+### 🔥 Saliency Maps
+Highlight important pixels affecting predictions.
+
+### 🗺 Feature Maps
+Visualize intermediate convolutional outputs.
+
+### 🎯 Class Activation Mapping (CAM)
+Shows where the model is focusing.
+
+### 🌌 Deep Dream
+Enhances patterns learned by filters.
+
+### 🧬 t-SNE Embeddings
+2D visualization of learned feature space.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|----------|--------|
+| Language | Python |
+| Deep Learning | PyTorch |
+| Dataset | Torchvision |
+| Metrics | Torchmetrics, Scikit-Learn |
+| Visualization | Matplotlib, Seaborn |
+| Graph Visualization | Torchviz |
 
 ---
 
@@ -78,83 +141,40 @@ pip install torchviz graphviz
 
 ---
 
-## 🏋️ Training Process
+## 🏋️ Training Workflow
 
-- Images resized to 32×32  
-- Normalized using CIFAR-10 mean and standard deviation  
-- Mini-batch training  
-- Multiple epoch training  
-- GPU support enabled (if available)  
-
----
-
-## 📊 Evaluation Metrics
-
-The model is evaluated using:
-
-- Accuracy  
-- Precision  
-- Recall  
-- F1-Score  
-- Confusion Matrix  
-- Per-class Classification Report  
-
-Outputs:
-- `best_cnn_cifar10.pth` – Saved trained model  
-- `cifar10_results.csv` – Evaluation results  
-- `cnn_architecture.png` – Model graph visualization  
+1️⃣ Load & Normalize Dataset  
+2️⃣ Define CNN Architecture  
+3️⃣ Train Model using Mini-Batch SGD  
+4️⃣ Evaluate on Test Data  
+5️⃣ Visualize Metrics & Interpret Results  
 
 ---
 
-## 📈 Visualization & Interpretability
+## 🎯 Learning Outcomes
 
-### Confusion Matrix
-Displays class-wise prediction performance.
-
-### Saliency Maps
-Highlights important pixels influencing predictions.
-
-### Feature Map Visualization
-Displays intermediate convolution outputs.
-
-### Class Activation Mapping (CAM)
-Shows model attention regions.
-
-### Deep Dream
-Generates patterns maximizing specific filters.
-
-### t-SNE Visualization
-2D projection of learned feature embeddings.
+- Understanding CNN internals  
+- Building custom training loops  
+- Implementing evaluation metrics  
+- Applying model interpretability techniques  
+- Visual debugging using feature maps  
 
 ---
 
-## 🛠️ Tech Stack
-
-- Python  
-- PyTorch  
-- Torchvision  
-- Torchmetrics  
-- Scikit-Learn  
-- Seaborn  
-- Matplotlib  
-- Torchviz  
-
----
-
-## 📌 Future Improvements
+## 🚀 Future Improvements
 
 - Add Batch Normalization  
-- Add Dropout  
-- Implement Learning Rate Scheduler  
+- Add Dropout Regularization  
+- Learning Rate Scheduler  
 - Data Augmentation  
-- Experiment with deeper architectures (ResNet-style blocks)  
+- Implement ResNet-style architecture  
 
 ---
 
-## 👩‍💻 Author
+<div align="center">
 
-Developed as a hands-on deep learning project to understand CNN architecture, training pipeline, and model interpretability techniques.
+### ⭐ If you like this project, give it a star!
 
----
+Built for deep learning practice & academic understanding.
 
-# ⭐ If you found this useful, consider starring the repository!
+</div>
