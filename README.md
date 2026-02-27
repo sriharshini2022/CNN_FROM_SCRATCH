@@ -1,56 +1,58 @@
 <div align="center">
 
 # 🧠 CNN From Scratch  
-### 🎯 CIFAR-10 Image Classification using PyTorch  
+### 🚀 CIFAR-10 Image Classification | Deep Learning Portfolio Project  
 
-<img src="https://img.shields.io/badge/PyTorch-DeepLearning-red?style=for-the-badge&logo=pytorch">
+<img src="https://img.shields.io/badge/PyTorch-Framework-red?style=for-the-badge&logo=pytorch">
 <img src="https://img.shields.io/badge/Dataset-CIFAR10-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/Model-CNN-green?style=for-the-badge">
-<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Visualization-Advanced-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Production Ready-success?style=for-the-badge">
 
 ---
 
-🚀 End-to-End Convolutional Neural Network built from scratch  
-📊 Training • Evaluation • Visualization • Interpretability  
+🎯 End-to-End CNN Implementation  
+📊 Training • Evaluation • Interpretability • Visualization  
+💡 Built to deeply understand Convolutional Neural Networks  
 
 </div>
 
 ---
 
-## 📌 Project Overview
+# 🌟 Project Overview
 
-This project implements a **Convolutional Neural Network (CNN)** from scratch using **PyTorch** to classify images from the CIFAR-10 dataset.
+This project implements a **Convolutional Neural Network (CNN)** completely from scratch using **PyTorch** to classify images from the CIFAR-10 dataset.
 
-It covers:
+Unlike basic implementations, this project goes beyond training — it focuses on:
 
-✔ Model Architecture Design  
-✔ Training Pipeline  
-✔ Performance Evaluation  
-✔ Advanced Visualization Techniques  
-✔ Model Interpretability  
+- ✅ Model Architecture Design  
+- ✅ Custom Training Loop  
+- ✅ Performance Analysis  
+- ✅ Visualization & Debugging  
+- ✅ Model Explainability Techniques  
 
 ---
 
-## 📂 Dataset – CIFAR-10
+# 🖼️ Dataset – CIFAR-10
 
 | Feature | Details |
-|---------|----------|
-| Total Images | 60,000 |
-| Image Size | 32 × 32 RGB |
+|----------|----------|
+| Images | 60,000 RGB Images |
+| Resolution | 32 × 32 |
 | Classes | 10 |
-| Training Images | 50,000 |
-| Test Images | 10,000 |
+| Train/Test Split | 50,000 / 10,000 |
 
 ### 🏷 Classes
 
-Airplane • Automobile • Bird • Cat • Deer • Dog • Frog • Horse • Ship • Truck  
+Airplane ✈ • Automobile 🚗 • Bird 🐦 • Cat 🐱 • Deer 🦌  
+Dog 🐶 • Frog 🐸 • Horse 🐴 • Ship 🚢 • Truck 🚚  
 
 ---
 
-## 🏗️ Model Architecture
+# 🏗️ Model Architecture
 
 ```
-Input Image (32x32x3)
+Input (32x32x3)
         ↓
 Conv2D → ReLU
         ↓
@@ -58,7 +60,7 @@ Conv2D → ReLU
         ↓
 MaxPooling
         ↓
-Conv2D (64 filters)
+Conv2D (64 Filters)
         ↓
 MaxPooling
         ↓
@@ -66,72 +68,114 @@ Flatten
         ↓
 Fully Connected Layer
         ↓
-Output (10 Classes)
+Output Layer (10 Classes)
 ```
 
 ### ⚙️ Training Configuration
 
-- **Loss Function:** CrossEntropyLoss  
-- **Optimizer:** SGD  
-  - Learning Rate: 0.001  
-  - Momentum: 0.9  
-  - Weight Decay: 0.005  
-- Batch Size: 64  
+| Parameter | Value |
+|------------|--------|
+| Loss Function | CrossEntropyLoss |
+| Optimizer | SGD |
+| Learning Rate | 0.001 |
+| Momentum | 0.9 |
+| Weight Decay | 0.005 |
+| Batch Size | 64 |
 
 ---
 
-## 📊 Evaluation Metrics
+# 📊 Model Performance
 
-✔ Accuracy  
-✔ Precision  
-✔ Recall  
-✔ F1-Score  
-✔ Confusion Matrix  
-✔ Classification Report  
+### 🔢 Evaluation Metrics
 
-📁 Outputs Generated:
-
-- `best_cnn_cifar10.pth`  
-- `cifar10_results.csv`  
-- `cnn_architecture.png`  
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix  
 
 ---
 
-## 🔍 Visualization & Interpretability
+# 📸 Project Screenshots
 
-This project includes advanced deep learning explainability techniques:
+> Replace the image paths below with your own screenshots stored in a `/screenshots` folder.
 
-### 🔥 Saliency Maps
-Highlight important pixels affecting predictions.
+## 🔹 Training Progress
 
-### 🗺 Feature Maps
-Visualize intermediate convolutional outputs.
+![Training Curve](screenshots/training_curve.png)
 
-### 🎯 Class Activation Mapping (CAM)
-Shows where the model is focusing.
+## 🔹 Confusion Matrix
 
-### 🌌 Deep Dream
-Enhances patterns learned by filters.
+![Confusion Matrix](screenshots/confusion_matrix.png)
 
-### 🧬 t-SNE Embeddings
-2D visualization of learned feature space.
+## 🔹 Feature Map Visualization
 
----
+![Feature Maps](screenshots/feature_maps.png)
 
-## 🛠️ Tech Stack
+## 🔹 Saliency Map
 
-| Category | Tools |
-|----------|--------|
-| Language | Python |
-| Deep Learning | PyTorch |
-| Dataset | Torchvision |
-| Metrics | Torchmetrics, Scikit-Learn |
-| Visualization | Matplotlib, Seaborn |
-| Graph Visualization | Torchviz |
+![Saliency Map](screenshots/saliency_map.png)
 
 ---
 
-## ⚙️ Installation
+# 🎥 Demo GIF (Optional but Recommended)
+
+> Add a screen recording GIF of your notebook or visualization output.
+
+```
+screenshots/demo.gif
+```
+
+```markdown
+![Project Demo](screenshots/demo.gif)
+```
+
+---
+
+# 🔍 Advanced Visualization & Explainability
+
+This project includes professional-level interpretability techniques:
+
+### 🔥 Saliency Maps  
+Highlight which pixels influenced the model’s decision.
+
+### 🎯 Class Activation Mapping (CAM)  
+Visual explanation of model attention regions.
+
+### 🗺️ Feature Map Visualization  
+Understand convolution layer outputs.
+
+### 🌌 Deep Dream  
+Visualizes learned filter patterns.
+
+### 🧬 t-SNE Embedding Visualization  
+Projects high-dimensional features into 2D space.
+
+---
+
+# 📂 Output Files
+
+| File | Description |
+|------|-------------|
+| `best_cnn_cifar10.pth` | Trained model weights |
+| `cifar10_results.csv` | Evaluation metrics |
+| `cnn_architecture.png` | Model graph visualization |
+
+---
+
+# 🛠️ Tech Stack
+
+- 🐍 Python  
+- 🔥 PyTorch  
+- 📦 Torchvision  
+- 📊 Scikit-Learn  
+- 📈 Matplotlib  
+- 🎨 Seaborn  
+- 🧩 Torchviz  
+
+---
+
+# ⚙️ Installation
 
 ```bash
 pip install torch torchvision
@@ -141,40 +185,40 @@ pip install torchviz graphviz
 
 ---
 
-## 🏋️ Training Workflow
+# 🏋️ Training Workflow
 
-1️⃣ Load & Normalize Dataset  
-2️⃣ Define CNN Architecture  
-3️⃣ Train Model using Mini-Batch SGD  
-4️⃣ Evaluate on Test Data  
-5️⃣ Visualize Metrics & Interpret Results  
-
----
-
-## 🎯 Learning Outcomes
-
-- Understanding CNN internals  
-- Building custom training loops  
-- Implementing evaluation metrics  
-- Applying model interpretability techniques  
-- Visual debugging using feature maps  
+1️⃣ Load & Normalize CIFAR-10  
+2️⃣ Build CNN Architecture  
+3️⃣ Train with Mini-Batch SGD  
+4️⃣ Evaluate on Test Dataset  
+5️⃣ Visualize & Interpret Results  
 
 ---
 
-## 🚀 Future Improvements
+# 🎯 Key Learning Outcomes
+
+- Deep understanding of CNN internals  
+- Hands-on experience with training pipelines  
+- Implementation of evaluation metrics  
+- Applying interpretability techniques  
+- Visualization-driven model debugging  
+
+---
+
+# 🚀 Future Improvements
 
 - Add Batch Normalization  
 - Add Dropout Regularization  
 - Learning Rate Scheduler  
 - Data Augmentation  
-- Implement ResNet-style architecture  
+- Implement Residual Connections (ResNet-style)  
 
 ---
 
 <div align="center">
 
-### ⭐ If you like this project, give it a star!
+## ⭐ If you found this impressive, consider starring the repository!
 
-Built for deep learning practice & academic understanding.
+### 💼 Built as a Deep Learning Portfolio Project  
 
 </div>
